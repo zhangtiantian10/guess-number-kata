@@ -1,7 +1,6 @@
 const scanf = require('scanf');
 
 const inputNumber = () => {
-    console.log('请输入四位数，以空格隔开');
     let input = scanf('%S');
 
     if (!checkInput(input)) {
