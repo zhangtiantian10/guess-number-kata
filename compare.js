@@ -1,4 +1,6 @@
-const compareInputAnswer = (input = "1 2 3 4", answer = "1 2 3 4") => {
+const inputNumber = require('./input');
+
+const compareInputAnswer = (input, answer = "1 2 3 4") => {
     const inputs = input.split(' ');
     const answers = answer.split(' ');
 
@@ -16,4 +18,4 @@ const including = (inputs, answers) => {
     return inputs.filter(input => answers.includes(input)).length;
 }
 
-console.log(compareInputAnswer());
+console.log(compareInputAnswer(inputNumber()));
