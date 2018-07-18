@@ -3,10 +3,11 @@ const scanf = require('scanf');
 const inputNumber = () => {
     let input = scanf('%S');
 
-    if (!checkInput(input)) {
+    while (!checkInput(input)) {
         console.log('输入格式有问题，请重新输入');
         input = scanf('%S');
     }
+
     return input;
 }
 
@@ -35,7 +36,7 @@ const checkInputIsNumberAndLength = (inputs) => {
             return false
     })
 
-    if (inputs.length > 4 || item) {
+    if (inputs.length !== 4 || item) {
         return false;
     }
     return true;
